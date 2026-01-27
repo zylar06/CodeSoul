@@ -5,6 +5,8 @@
 
 ![CodeSoul](https://img.shields.io/badge/Vibe-100%25-purple?style=for-the-badge) ![Tech](https://img.shields.io/badge/Stack-Python%20%7C%20uv%20%7C%20Textual%20%7C%20DeepSeek-blue?style=for-the-badge)
 
+[🇨🇳 中文文档](README_CN.md)
+
 ## 🤔 What is this?
 
 **CodeSoul** is a RAG (Retrieval-Augmented Generation) powered Terminal User Interface (TUI) that indexes your source code and generates a "Soul" (Persona) based on its statistics.
