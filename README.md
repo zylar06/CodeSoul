@@ -17,19 +17,52 @@
 
 ## 🚀 Quick Start
 
-### Installation
+Choose one of the following methods to start CodeSoul.
 
-**The best way to use CodeSoul is to install it as a global tool with `uv`:**
+### Method 1: Global Install (Recommended)
+
+Best for frequent use.
+
+1.  **Install**
+    ```bash
+    uv tool install .
+    ```
+
+2.  **⚠️ Configure PATH (Crucial)**
+    If you see `command not found` after installation, run this to fix your PATH:
+    ```bash
+    uv tool update-shell
+    # Then restart terminal or run source ~/.zshrc
+    ```
+
+3.  **Run**
+    ```bash
+    # Syntax: codesoul [TARGET_PATH]
+    
+    # Example: Analyze current directory
+    codesoul .
+    
+    # Example: Analyze another project (Space required)
+    codesoul /Users/yourname/projects/my-react-app
+    ```
+
+### Method 2: Direct Run (No Config)
+
+Best for quick trial without changing system PATH.
+
+Run directly from the CodeSoul source directory:
 
 ```bash
-# Install globally
-uv tool install .
+# Syntax: uv run codesoul [TARGET_PATH]
 
-# Run from anywhere
-codesoul /path/to/any/project
+# Example: Analyze current directory
+uv run codesoul .
+
+# Example: Analyze another project
+uv run codesoul /Users/yourname/projects/my-react-app
 ```
 
-### Development Setup
+## 💻 Developer Guide
 
 If you want to contribute or modify the code:
 

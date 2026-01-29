@@ -17,21 +17,54 @@
 
 ## 🚀 快速开始
 
-### 安装指南
+你可以根据是否需要长期使用，选择以下两种方式之一来启动 CodeSoul。
 
-**推荐使用 `uv` 将其安装为全局工具：**
+### 方法一：全局安装（推荐）
+
+适合经常使用本工具的用户。
+
+1.  **安装工具**
+    ```bash
+    uv tool install .
+    ```
+
+2.  **⚠️ 配置环境变量（关键）**
+    如果安装后运行 `codesoul` 提示 `command not found`，请运行以下命令自动修复 PATH：
+    ```bash
+    uv tool update-shell
+    # 然后重启终端，或者运行 source ~/.zshrc (取决于你的 shell)
+    ```
+
+3.  **运行分析**
+    ```bash
+    # 格式：codesoul [目标项目路径]
+    
+    # 示例：分析当前目录
+    codesoul .
+    
+    # 示例：分析其他项目（注意中间有空格）
+    codesoul /Users/yourname/projects/my-react-app
+    ```
+
+### 方法二：直接运行（无需配置）
+
+适合只想快速体验，不想修改系统环境变量的用户。
+
+直接在 CodeSoul 源码目录下运行：
 
 ```bash
-# 全局安装
-uv tool install .
+# 格式：uv run codesoul [目标项目路径]
 
-# 在任何地方运行
-codesoul /path/to/any/project
+# 示例：分析当前目录
+uv run codesoul .
+
+# 示例：分析其他项目
+uv run codesoul /Users/yourname/projects/my-react-app
 ```
 
-### 开发环境配置
+## 💻 开发者指南
 
-如果你想修改代码或参与贡献：
+如果你想修改 CodeSoul 的源码或参与贡献：
 
 1.  **克隆仓库**
     ```bash
