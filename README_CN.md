@@ -28,14 +28,21 @@
     uv tool install .
     ```
 
-2.  **⚠️ 配置环境变量（关键）**
+2.  **🔑 配置 API Key（必须）**
+    CodeSoul 需要 DeepSeek API Key 才能唤醒“代码之魂”。
+    ```bash
+    export DEEPSEEK_API_KEY="sk-你的密钥"
+    # 建议将此行添加到 ~/.zshrc 或 ~/.bashrc 以永久生效
+    ```
+
+3.  **⚠️ 配置环境变量（关键）**
     如果安装后运行 `codesoul` 提示 `command not found`，请运行以下命令自动修复 PATH：
     ```bash
     uv tool update-shell
     # 然后重启终端，或者运行 source ~/.zshrc (取决于你的 shell)
     ```
 
-3.  **运行分析**
+4.  **运行分析**
     ```bash
     # 格式：codesoul [目标项目路径]
     
@@ -49,6 +56,7 @@
 ### 方法二：直接运行（无需配置）
 
 适合只想快速体验，不想修改系统环境变量的用户。
+*(前提：你需要先 `export DEEPSEEK_API_KEY=...` 或者在当前目录下放置 `.env` 文件)*
 
 直接在 CodeSoul 源码目录下运行：
 

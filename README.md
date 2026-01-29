@@ -28,14 +28,21 @@ Best for frequent use.
     uv tool install .
     ```
 
-2.  **⚠️ Configure PATH (Crucial)**
+2.  **🔑 Configure API Key (Required)**
+    CodeSoul needs a DeepSeek API Key to manifest the spirit.
+    ```bash
+    export DEEPSEEK_API_KEY="sk-your-key-here"
+    # Add this to your ~/.zshrc or ~/.bashrc for persistence
+    ```
+
+3.  **⚠️ Configure PATH (Crucial)**
     If you see `command not found` after installation, run this to fix your PATH:
     ```bash
     uv tool update-shell
     # Then restart terminal or run source ~/.zshrc
     ```
 
-3.  **Run**
+4.  **Run**
     ```bash
     # Syntax: codesoul [TARGET_PATH]
     
@@ -49,6 +56,7 @@ Best for frequent use.
 ### Method 2: Direct Run (No Config)
 
 Best for quick trial without changing system PATH.
+*(Note: You must `export DEEPSEEK_API_KEY=...` first or have a `.env` file in the current directory)*
 
 Run directly from the CodeSoul source directory:
 
